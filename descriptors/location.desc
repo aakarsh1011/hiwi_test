@@ -1,0 +1,21 @@
+
+¬
+location.proto"‘
+location
+utc_time (RutcTime
+latitude (	Rlatitude#
+lat_direction (	RlatDirection
+	longitude (	R	longitude#
+lon_direction (	RlonDirection
+quality (Rquality
+num_sats (RnumSats
+hdop (Rhdop
+altitude	 (Raltitude
+	alt_units
+ (	RaltUnits
+
+undulation (R
+undulation
+	und_units (	RundUnits
+age (Rage
+stn_id (	RstnIdbproto3

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+message location {
+  double utc_time       = 1;
+  string latitude       = 2;
+  string lat_direction  = 3;
+  string longitude      = 4;
+  string lon_direction  = 5;
+  int32  quality        = 6;
+  int32  num_sats       = 7;
+  double hdop           = 8;
+  double altitude       = 9;
+  string alt_units      = 10;
+  double undulation     = 11;
+  string und_units      = 12;
+  double age            = 13;
+  string stn_id         = 14;
+}
