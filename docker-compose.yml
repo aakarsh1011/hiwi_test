@@ -38,3 +38,12 @@ services:
       - KAFKA_RESTART_ATTEMPTS=10
       - KAFKA_RESTART_DELAY=5
       - ZOOKEEPER_AUTOPURGE_PURGE_INTERVAL=0
+    
+  datareciver:
+    build:
+      context: .
+      dockerfile: Dockerfile_rec
+    ports:
+      - "8000:8000"
+    depends_on:
+      - kafka
