@@ -23,16 +23,12 @@ location = location_pb2.location()  # Create a position instance
 
 # Function to format location data
 def format_location_data(location):
-    lat = f"{location.latitude} {location.lat_direction}"
-    lon = f"{location.longitude} {location.lon_direction}"
-    formatted_lat = f"{float(location.latitude) / 100} {location.lat_direction}"
-    formatted_lon = f"{float(location.longitude) / 100} {location.lon_direction}"
+    formatted_lat = f"{location.latitude} {location.lat_direction}"
+    formatted_lon = f"{location.longitude} {location.lon_direction}"
     formatted_data = (
         f"UTC Time: {location.utc_time}\n"
-        f"Latitude: {lat}\n"
-        f"Longitude: {lon}\n"
-        f"Formatted Latitude: {formatted_lat}\n"
-        f"Formatted Longitude: {formatted_lon}\n"
+        f"Latitude: {formatted_lat}\n"
+        f"Longitude: {formatted_lon}\n"
         f"Quality: {location.quality}\n"
         f"Number of Satellites: {location.num_sats}\n"
         f"HDOP: {location.hdop}\n"
@@ -65,7 +61,7 @@ initial_fig.update_layout(
 
 # Layout of the app
 app.layout = html.Div([
-    dcc.Graph(id='live-update-graph',style={'height': '600px', 'width':'100%'}, figure=initial_fig),
+    dcc.Graph(id='live-update-graph', figure=initial_fig),
     dcc.Interval(
         id='interval-component',
         interval=1 * 1000,  # in milliseconds
