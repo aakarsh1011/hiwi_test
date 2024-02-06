@@ -120,7 +120,7 @@ The Location Service is designed to consume and visualize real-time data from th
    - Subscribe to the `location_topic` Kafka topic.
 
 ### 2. Initialize Dash App and Plotly Map
-   - Create a Dash app to host the live map visualization.
+   - Create a Dash app to host the live map visualization at ``` localhost:8000```
    - Use Plotly Express to initialize an empty scatter map with an OpenStreetMap style.
    - Set up the layout of the Dash app with a graph component for the map and an interval component for periodic updates.
 
